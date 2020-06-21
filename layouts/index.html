@@ -1,13 +1,13 @@
 {{ define "main" }}
 
 <div id="main">
-  <img id="map-img" src="{{ .Site.BaseURL }}/images/map.jpg" alt="マップ" title="マップ">
+  <div id="map-img"></div>
   <div id="whale"></div>
   <div id="whale-info">
     くじらだよ
   </div>
 </div>
 
-{{- partial "index_js.html" . -}}
+{{- partial "index.js.html" . -}}
 
 {{ end }}

@@ -1,0 +1,37 @@
+<script type="text/javascript">
+  const mapImg = new Image();
+  const whale = document.getElementById('whale');
+  const whaleInfo = document.getElementById('whale-info');
+
+  mapImg.onload = () => {
+    const ratio = window.innerHeight / mapImg.naturalHeight;
+    mapImg.height = mapImg.naturalHeight * ratio;
+    mapImg.width = mapImg.naturalWidth * ratio;
+
+    whale.style.height = `${mapImg.height * 0.08}px`;
+    whale.style.width = `${mapImg.width * 0.08}px`;
+    whale.style.top = `${mapImg.height * 0.186}px`;
+    whale.style.left = `${mapImg.width * 0.283}px`;
+
+    whaleInfo.style.height = `${mapImg.height * 0.1}px`;
+    whaleInfo.style.width = `${mapImg.width * 0.1}px`;
+    whaleInfo.style.top = `${mapImg.height * 0.186}px`;
+    whaleInfo.style.left = `${mapImg.width * 0.38}px`;
+  }
+
+  mapImg.src = '{{ .Site.BaseURL }}/images/map.jpg';
+  mapImg.alt = 'マップ';
+  mapImg.title = 'マップ';
+  const map = document.getElementById('map-img');
+  map.appendChild(mapImg);
+
+  let whaleInfoShow = false;
+  whale.onclick = () => {
+    whaleInfoShow = !whaleInfoShow;
+    if (whaleInfoShow) {
+      whaleInfo.style.display = 'block';
+    } else {
+      whaleInfo.style.display = 'none';
+    }
+  }
+</script>
