@@ -1,6 +1,6 @@
 'use strict';
 
-const map = document.getElementById('map');
+const map = document.getElementById('map-img');
 
 map.onload = () => {
   const mapWidth = map.naturalWidth;
