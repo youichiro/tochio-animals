@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<title>{{ .Title }}</title>
+
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- css -->
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}/images/favicon.jpeg" />

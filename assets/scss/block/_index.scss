@@ -1,0 +1,23 @@
+#whale {
+  position: absolute;
+  left: 416px;
+  top: 150px;
+  height: 80px;
+  width: 140px;
+  border: solid 1px gray;
+  border-radius: 30%;
+  cursor: pointer;
+}
+
+#whale-info {
+  position: absolute;
+  left: 580px;
+  top: 150px;
+  height: 200px;
+  width: 200px;
+  background-color: gray;
+  color: white;
+  border-radius: 20%;
+  padding: 20px;
+  display: none;
+}
