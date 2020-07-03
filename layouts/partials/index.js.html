@@ -1,29 +1,46 @@
 <script type="text/javascript">
+  // new image
   const mapImg = new Image();
+  const pinImg = new Image();
+  const whaleImg = new Image();
+  // get element
+  const map = document.getElementById('map-img');
+  const pin = document.getElementById('pin');
   const whale = document.getElementById('whale');
   const whaleInfo = document.getElementById('whale-info');
 
   mapImg.onload = () => {
-    const ratio = window.innerHeight / mapImg.naturalHeight;
+    // get map image height/width
+    const ratio = window.innerHeight / mapImg.naturalHeight * 0.84;
     mapImg.height = mapImg.naturalHeight * ratio;
     mapImg.width = mapImg.naturalWidth * ratio;
 
-    whale.style.height = `${mapImg.height * 0.08}px`;
-    whale.style.width = `${mapImg.width * 0.08}px`;
-    whale.style.top = `${mapImg.height * 0.186}px`;
-    whale.style.left = `${mapImg.width * 0.283}px`;
+    // adjust positions
+    whale.style.width = `${mapImg.width * 0.11}px`;
+    whale.style.top = `${mapImg.height * 0.148}px`;
+    whale.style.left = `${mapImg.width * 0.265}px`;
 
     whaleInfo.style.height = `${mapImg.height * 0.1}px`;
     whaleInfo.style.width = `${mapImg.width * 0.1}px`;
     whaleInfo.style.top = `${mapImg.height * 0.186}px`;
     whaleInfo.style.left = `${mapImg.width * 0.38}px`;
+
+    pin.style.width = `${mapImg.height * 0.1}px`;
+    pin.style.top = `${mapImg.height * 0.090}px`;
+    pin.style.left = `${mapImg.width * 0.292}px`;
   }
 
+  // inject images
   mapImg.src = '{{ .Site.BaseURL }}/images/map.jpg';
   mapImg.alt = 'マップ';
   mapImg.title = 'マップ';
-  const map = document.getElementById('map-img');
   map.appendChild(mapImg);
+
+  pinImg.src = '{{ .Site.BaseURL }}/images/pin.svg';
+  pin.appendChild(pinImg);
+
+  whaleImg.src = '{{ .Site.BaseURL }}/images/kujira.svg';
+  whale.appendChild(whaleImg);
 
   let whaleInfoShow = false;
   whale.onclick = () => {
