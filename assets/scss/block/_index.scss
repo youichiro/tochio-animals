@@ -21,8 +21,15 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 3;
-  display: none;
+  z-index: 4;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+
+  #show-info:checked+& {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 #whale-info {
@@ -32,8 +39,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
-  height: 90vh;
+  width: 80vw;
+  height: 80vh;
 }
 
 #pin {
@@ -46,4 +53,8 @@
   bottom: 1rem;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+#show-info {
+  visibility: hidden;
 }

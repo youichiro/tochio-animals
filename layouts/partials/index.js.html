@@ -41,12 +41,4 @@
   // inject whale image
   whaleImg.src = '{{ .Site.BaseURL }}/images/kujira.svg';
   whale.appendChild(whaleImg);
-
-  // toggle info
-  whale.onclick = () => {
-    overlay.style.display = 'block';
-  }
-  cancel.onclick = () => {
-    overlay.style.display = 'none';
-  }
 </script>
