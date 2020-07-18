@@ -1,3 +1,8 @@
 baseURL = "https://tochio-animals.netlify.app"
 languageCode = "ja"
-title = "tochio-animals"
+title = "栃尾動物園"
+
+[params]
+  description = "栃尾動物園マップ"
+  keyword = "栃尾,長岡,くじら,鯨,座頭鯨,アート,加治聖哉,作品"
+  image = "images/photo.jpeg"

@@ -1,6 +1,32 @@
 <meta charset="utf-8">
 <title>{{ .Title }}</title>
 
+<!-- description -->
+{{- if .Site.Params.description }}
+  <meta name="description" content="{{ .Site.Params.description }}">
+{{- end }}
+
+<!-- keyword -->
+{{- if .Site.Params.keyword }}
+  <meta name="keyword" content="{{ .Site.Params.keyword }}">
+{{- end }}
+
+<!-- OGP -->
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="ja_JP">
+
+{{- if .Site.Params.image }}
+  {{- $imageRes := resources.Get .Site.Params.image -}}
+  <meta property="og:image" content="{{ $imageRes.Permalink }}">
+{{- end }}
+
+{{- if .Site.Params.description }}
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+{{- end }}
+
 <!-- viewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
