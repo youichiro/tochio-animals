@@ -4,7 +4,8 @@ html {
   font-size: 100%;
 }
 
-body {
+body,
+p {
   margin: 0;
 }
 
@@ -48,3 +49,8 @@ img {
   vertical-align: top;
 }
 
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}

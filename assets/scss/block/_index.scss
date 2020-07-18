@@ -23,8 +23,9 @@
   height: 100vh;
   z-index: 4;
   visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s;
   opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+  background-color: rgba(255, 255, 255, 0.5);
 
   #show-info:checked+& {
     visibility: visible;
@@ -32,15 +33,15 @@
   }
 }
 
-#whale-info {
+.info {
   position: fixed;
-  background-color: gray;
-  color: white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80vw;
+  max-width: 40rem;
   height: 80vh;
+  box-shadow: 0 20px 30px -10px;
 }
 
 #pin {

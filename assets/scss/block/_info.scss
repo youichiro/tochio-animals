@@ -1,0 +1,71 @@
+.info-block {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: scroll;
+
+  .close-btn {
+    width: 3rem;
+    text-align: center;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: gray;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  .title-block {
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  .img-block {
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text-block {
+    margin: 1rem;
+
+    p {
+      margin: 0.4rem 0;
+      line-height: 1.4rem;
+    }
+  }
+
+  .map-block {
+    width: 100%;
+  }
+
+  .link-block {
+    margin: 2rem 0;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      border: solid 1px gray;
+      border-radius: 4px;
+      line-height: 1.4rem;
+      transition: .3s;
+      padding: 0.4rem 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #E2E2E2;
+      }
+    }
+  }
+}

@@ -5,9 +5,8 @@
   <label id="whale" for="show-info"></label>
   <input id="show-info" type="checkbox" />
   <div id="overlay">
-    <div id="whale-info" class="info">
-      <label id="whale-info__cancel" for="show-info">×</label>
-      くじらだよ
+    <div class="info">
+      {{- partial "info.html" . -}}
     </div>
   </div>
   <div id="pin"></div>
