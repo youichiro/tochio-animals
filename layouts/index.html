@@ -2,6 +2,7 @@
 
 <div id="main">
   <div id="map-img"></div>
+  <label id="pin" for="show-info"></label>
   <label id="whale" for="show-info"></label>
   <input id="show-info" type="checkbox" />
   <div id="overlay">
@@ -9,7 +10,7 @@
       {{- partial "info.html" . -}}
     </div>
   </div>
-  <div id="pin"></div>
+
   <img id="mojihoui" src="{{ .Site.BaseURL }}/images/mojihoui.svg" />
 </div>
 

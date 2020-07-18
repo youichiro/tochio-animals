@@ -10,6 +10,12 @@
   margin-bottom: 60px;
 }
 
+#pin {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+}
+
 #whale {
   position: absolute;
   cursor: pointer;
@@ -42,10 +48,6 @@
   max-width: 40rem;
   height: 80vh;
   box-shadow: 0 20px 30px -10px;
-}
-
-#pin {
-  position: absolute;
 }
 
 #mojihoui {
